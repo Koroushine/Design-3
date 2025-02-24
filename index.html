@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare & Medical AI</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: url('back3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow-x: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            padding: 50px;
+            background: rgba(0, 19, 70, 0.562);
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5);
+            text-align: center;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-title {
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 1);
+            margin-bottom: 20px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px rgba(0, 255, 255, 1); }
+            to { text-shadow: 0 0 20px rgba(0, 255, 255, 1); }
+        }
+
+        .sections-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .section-box {
+            flex: 1;
+            min-width: 45%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+            animation: bounceIn 1.5s ease-in-out;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .section-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 225, 255, 0.7);
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #007BFF, #00e1ff);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 225, 255, 0.7);
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); box-shadow: 0 0 15px rgba(0, 225, 255, 0.7); }
+            to { transform: scale(1.1); box-shadow: 0 0 25px rgba(0, 225, 255, 1); }
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(0, 225, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-title">Healthcare & Medical AI</div>
+        <div class="sections-container">
+            <div class="section-box">
+                <h2>AI X-ray Disease Detection</h2>
+                <p>Upload an X-ray image for AI-based disease detection.</p>
+                <input type="file" accept="image/*">
+                <p>Select a disease to check:</p>
+                <label><input type="radio" name="disease"> Pneumonia</label>
+                <label><input type="radio" name="disease"> Tuberculosis</label>
+                <label><input type="radio" name="disease"> Lung Cancer</label>
+                <br>
+                <a href="#" class="btn">Submit X-ray</a>
+                <p>AI analysis result will appear here...</p>
+            </div>
+
+            <div class="section-box">
+                <h2>AI Mental Health Chatbot</h2>
+                <p>Type your thoughts or questions below. Our AI chatbot is here to provide guidance and emotional support.</p>
+                <textarea placeholder="How are you feeling today?" style="width: 80%; height: 100px;"></textarea>
+                <br>
+                <a href="#" class="btn">Submit</a>
+                <p>Chatbot response will appear here...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
